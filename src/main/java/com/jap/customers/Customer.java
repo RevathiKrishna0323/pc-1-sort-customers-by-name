@@ -14,7 +14,7 @@ private String city;
         this.isSeniorCitizen = isSeniorCitizen;
         this.city = city;
     }
-// getters and setters
+    // getters and setters
 
     public int getCustomerId() {
         return customerId;
@@ -54,5 +54,17 @@ private String city;
 
     public void setCity(String city) {
         this.city = city;
+    }
+    //generate toString() method
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", customerGender='" + customerGender + '\'' +
+                ", isSeniorCitizen=" + isSeniorCitizen +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
