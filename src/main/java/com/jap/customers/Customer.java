@@ -14,6 +14,7 @@ private String city;
         this.isSeniorCitizen = isSeniorCitizen;
         this.city = city;
     }
+// getters and setters
 
     public int getCustomerId() {
         return customerId;
@@ -54,10 +55,4 @@ private String city;
     public void setCity(String city) {
         this.city = city;
     }
-
-    @Override
-    public String toString() {
-        return "";
-    }
-
 }
