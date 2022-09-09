@@ -8,6 +8,9 @@ private String customerName;
 private String customerGender;
 private boolean isSeniorCitizen;
 private String city;
+    // create no args constructor
+    public Customer() {
+    }
 
     public Customer(int customerId, String customerName, String customerGender, boolean isSeniorCitizen, String city) {
         this.customerId = customerId;
@@ -16,6 +19,7 @@ private String city;
         this.isSeniorCitizen = isSeniorCitizen;
         this.city = city;
     }
+
     // getters and setters
 
     public int getCustomerId() {
