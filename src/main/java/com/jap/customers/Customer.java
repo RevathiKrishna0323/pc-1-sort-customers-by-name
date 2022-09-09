@@ -1,5 +1,7 @@
 package com.jap.customers;
 
+import java.util.Objects;
+
 public class Customer {
 private int customerId;
 private String customerName;
@@ -66,5 +68,19 @@ private String city;
                 ", isSeniorCitizen=" + isSeniorCitizen +
                 ", city='" + city + '\'' +
                 '}';
+    }
+    // create equals and hashcode
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return customerId == customer.customerId && isSeniorCitizen == customer.isSeniorCitizen && Objects.equals(customerName, customer.customerName) && Objects.equals(customerGender, customer.customerGender) && Objects.equals(city, customer.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, customerName, customerGender, isSeniorCitizen, city);
     }
 }
