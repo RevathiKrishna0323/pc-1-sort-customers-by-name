@@ -1,8 +1,9 @@
 package com.jap.customers;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Customer {
+public class Customer implements Comparator {
 private int customerId;
 private String customerName;
 private String customerGender;
@@ -74,6 +75,11 @@ private String city;
                 '}';
     }
     // create equals and hashcode
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        return 0;
+    }
 
     @Override
     public boolean equals(Object o) {
